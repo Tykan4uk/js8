@@ -11,11 +11,87 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>JS*</title>
+  <title>JS5</title>
+
+  <link
+    media="all"
+    rel="stylesheet"
+    href="./styles.css"
+  >
 </head>
 
 <body>
+  <div class="tabs">
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-1"
+      value=""
+      checked
+    >
+    <label for="tab-btn-1">Prototype inheritance</label>
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-2"
+      value=""
+    >
+    <label for="tab-btn-2">Prototype constructor</label>
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-3"
+      value=""
+    >
+    <label for="tab-btn-3">Fibonacci recursion</label>
+    <input
+      type="radio"
+      name="tab-btn"
+      id="tab-btn-4"
+      value=""
+    >
+    <label for="tab-btn-4">Fibonacci recursion with cache</label>
 
+    <div id="content-1">
+      <input
+        type="text"
+        placeholder="Input student name..."
+        id="inheritance-input"
+      >
+      <button onclick="faculty.enlistStudent(getValueById('inheritance-input'))">Add student</button>
+      <textarea
+        id="inheritance-output"
+        cols="30"
+        rows="15"
+      ></textarea>
+    </div>
+    <div id="content-2">
+      <label>Result in console</label>
+    </div>
+    <div id="content-3">
+      <input
+        type="number"
+        placeholder="Input you number..."
+        id="fibonacci-input"
+        value="7"
+        min="1"
+        onchange="document.getElementById('fibonacci-output').innerHTML = fibonacci(+getValueById('fibonacci-input'))"
+      >
+      <label>Result: <label id="fibonacci-output">13</label></label>
+    </div>
+    <div id="content-4">
+      <input
+        type="number"
+        placeholder="Input you number..."
+        id="fibonacci-cached-input"
+        value="7"
+        min="1"
+        onchange="document.getElementById('fibonacci-cached-output').innerHTML = decoratedFib(+getValueById('fibonacci-cached-input'))"
+      >
+      <label>Result: <label id="fibonacci-cached-output">13</label></label>
+    </div>
+  </div>
+  <script src="./index.js"></script>
 </body>
 
 </html>
